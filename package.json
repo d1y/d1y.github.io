@@ -1,0 +1,20 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "妹子对象",
+  "main": "fack.js",
+  "scripts": {
+    "dev": "browser-sync --server --files '**' ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d1y/d1y.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d1y/d1y.github.io/issues"
+  },
+  "homepage": "https://github.com/d1y/d1y.github.io#readme"
+}
