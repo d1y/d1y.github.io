@@ -91,6 +91,17 @@
             }),root)
           }
         }
+        if (data['颜色']) {
+          append(新建({
+            wrap: 'img',
+            '_src': 'https://ghchart.rshah.org/'+data['颜色'].substr(1)+arguments[0]['你']
+          }))
+        }else if (data['颜色']) {
+          append(新建({
+            wrap: 'img',
+            '_src': 'https://ghchart.rshah.org/'+arguments[0]['你']
+          }))
+        }
       }
     })
     请求({
