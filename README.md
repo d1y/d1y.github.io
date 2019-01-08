@@ -1,15 +1,12 @@
-```bash
-        _   _      _ _         ____  ___   __
-        | | | | ___| | | ___   |  _ \/ \ \ / /
-        | |_| |/ _ \ | |/ _ \  | | | | |\ V /
-        |  _  |  __/ | | (_) | | |_| | | | |  
-        |_| |_|\___|_|_|\___/  |____/|_| |_|  
-```
+<p align="center">
+  <img src="favicon.ico">
+</p>
 
-## setup
-`example`,`.html` new Object
+# setup
+Import `fack.js` file,And put it in your `.html`
 ```javascript
-  new 女朋友({
-    github: 'd1y'
+  new 妹子({
+    你: 'd1y',
+    容器: '#app'
   })
 ```

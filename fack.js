@@ -52,12 +52,6 @@
     return a
   }
   function append(before,after) {
-    if(_typeof(before) == 'array'){
-      before.forEach(function(item,index) {
-        console.log(item,index);
-      })
-      return
-    }
     after.appendChild(before)
   }
   window.妹子 = function(){

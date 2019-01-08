@@ -6,6 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Miku</title>
   <link href="https://cdn.bootcss.com/github-markdown-css/2.10.0/github-markdown.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <style media="screen">
+    li{
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      line-height: 1.8;
+    }
+    li a:before{
+      display: inline-block;
+      content: "●";
+      color: #25578f;
+      padding-right: .5rem;
+    }
+  </style>
 </head>
 <body>
   <div id="app" class="markdown-body"></div>
