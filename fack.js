@@ -55,10 +55,10 @@
     after.appendChild(before)
   }
   window.妹子 = function(){
-    root = document.querySelector(arguments[0]['容器'])
+    root = document.querySelector(arguments[0]['容器']),arg=arguments[0]
     请求({
       type: 'get',
-      url: 'https://api.github.com/users/'+arguments[0]['你'],
+      url: 'https://api.github.com/users/'+arg['你'],
       success: function (data) {
         append(新建({
           wrap: 'img',
@@ -76,6 +76,21 @@
           wrap: 'blockquote',
           '_html': '<p>'+data['bio']+'</p>👾 Create date: '+data['created_at'].substr(0,10)+' ✨ Followers: '+data["followers"]+ ' 🌠 Following: ' +data["following"]
         }),root)
+        p = 新建({
+          wrap: 'p'
+        })
+        if (arg['颜色']) {
+          append(新建({
+            wrap: 'img',
+            '_src': 'https://ghchart.rshah.org/'+arg['颜色'].substr(1)+'/'+arg['你']
+          }),p)
+        }else if (arguments[0]['颜色']) {
+          append(新建({
+            wrap: 'img',
+            '_src': 'https://ghchart.rshah.org/'+arg['你']
+          }),p)
+        }
+        append(p,root)
         if (data['blog'].indexOf('http://') || data['blog'].indexOf('https://')){
           if (data['blog'].charAt(4) == ':') {
             append(新建({
@@ -91,22 +106,11 @@
             }),root)
           }
         }
-        if (data['颜色']) {
-          append(新建({
-            wrap: 'img',
-            '_src': 'https://ghchart.rshah.org/'+data['颜色'].substr(1)+arguments[0]['你']
-          }))
-        }else if (data['颜色']) {
-          append(新建({
-            wrap: 'img',
-            '_src': 'https://ghchart.rshah.org/'+arguments[0]['你']
-          }))
-        }
       }
     })
     请求({
       type: 'get',
-      url: 'https://api.github.com/users/'+arguments[0]['你']+'/repos',
+      url: 'https://api.github.com/users/'+arg['你']+'/repos',
       success: function (data) {
         append(新建({
           wrap: 'h2',
