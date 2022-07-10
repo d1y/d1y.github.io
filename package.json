@@ -1,20 +1,26 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "description": "妹子对象",
-  "main": "fack.js",
+  "name": "d1y-website",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "dev": "browser-sync --server --files '**' ."
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "push": "gh-pages -d dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/d1y/d1y.github.io.git"
+  "dependencies": {
+    "@geist-ui/core": "^2.3.8",
+    "@geist-ui/icons": "^1.0.2",
+    "@geist-ui/react": "^2.2.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/d1y/d1y.github.io/issues"
-  },
-  "homepage": "https://github.com/d1y/d1y.github.io#readme"
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "gh-pages": "^4.0.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
+  }
 }
